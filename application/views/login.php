@@ -14,8 +14,8 @@
 <body>
 	<div id="logo" align="center"><img src="<?php echo base_url();?>/images/logo.png"></div>
 
-	<div id="login">
-		<?php echo form_open('login') ?>
+	<div id="login">		
+		<?php echo form_open('login', ['autocomplete' => 'off']); ?>
 			<div id="container">
 				<div align="center" style="color:red"><?php echo validation_errors(); ?></div>
 				
@@ -29,7 +29,6 @@
 						<span class="input-group-addon input-sm"><span class="glyphicon glyphicon-lock"></span></span>
 						<input class="form-control" placeholder="<?php echo $this->lang->line('login_password')?>" name="password" type="password" size=20></input>
 					</div>
-					
 					<input class="btn btn-primary btn-block" type="submit" name="loginButton" value="Go"/>
 				</div>
 			</div>
